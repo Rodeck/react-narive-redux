@@ -5,6 +5,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements'
 import Footer from './screens/Footer';
+import { Provider } from 'react-redux'
+import configureStore from './redux/Store'
+import { connect } from 'react-redux'
+import { State } from 'react-native-gesture-handler';
+import PlaceList from './screens/PlaceList';
+import AddPlace from './screens/AddPlace';
 
 function HomeScreen({navigation}) {
   return (
@@ -18,30 +24,30 @@ function HomeScreen({navigation}) {
   );
 }
 
-function PlacesList({navigation}) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>List</Text>
-    </View>
-  );
-}
+// function PlacesList({navigation}) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Text>List</Text>
+//     </View>
+//   );
+// }
 
 function PlaceHomeScreen({navigation}) {
   return (
     <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
-      <Tab.Screen name="Places" component={PlacesList} />
+      <Tab.Screen name="Places" component={PlaceList} />
       <Tab.Screen name="Add" component={AddPlace} />
     </Tab.Navigator>
   );
 }
 
-function AddPlace({navigation}) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Add</Text>
-    </View>
-  );
-}
+// function AddPlace({navigation}) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Text>Add</Text>
+//     </View>
+//   );
+// }
 
 function MyTabBar({ state, descriptors, navigation }) {
   return (
@@ -95,15 +101,18 @@ function MyTabBar({ state, descriptors, navigation }) {
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const Store = configureStore();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="List" component={PlaceHomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={Store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="List" component={PlaceHomeScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 
