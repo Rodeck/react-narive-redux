@@ -1,14 +1,21 @@
-import { createStore, combineReducers } from 'redux'
-import placeReducer, { PlacesState } from './reducers/PlaceReducer'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk';
+import placeReducer, { initialPlacesState, PlacesState } from './reducers/PlaceReducer'
 
 const rootReducer = combineReducers({
     places: placeReducer
 });
 
-const configureStore = () => createStore(rootReducer);
+const middleware = [thunk];
+
+const configureStore = () => createStore(rootReducer, initialState, applyMiddleware(...middleware));
 
 export default configureStore;
 
 export interface AppState {
-    places: PlacesState
+    places: PlacesState,
+}
+
+const initialState: AppState = {
+    places: initialPlacesState,
 }

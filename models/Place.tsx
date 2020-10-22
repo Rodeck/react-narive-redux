@@ -1,6 +1,7 @@
 export interface Place {
     name: string;
     description: string;
-    addDate: Date;
-    key: string;
+    createDate: Date;
+    id: string;
+    images: string[];
 }
