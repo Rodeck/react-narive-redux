@@ -1,13 +1,14 @@
 import * as FileSystem from 'expo-file-system';
 import { readAsStringAsync } from 'expo-file-system';
 import { addPlace, addPlaceFailed, addPlaceSuccess, loadCategorizedPlaces, loadCategorizedPlacesFailed, loadCategorizedPlacesSuccess, loadPlaces, loadPlacesFailed, loadPlacesSuccess } from "../redux/actions/PlaceActions";
+import { apiConfig } from './ApiConfig';
 
 
 export function fetchPlaces() {
     return dispatch => {
         console.log('fetchProducts')
         dispatch(loadPlaces());
-        fetch('http://192.168.1.22:5000/Places')
+        fetch(apiConfig.baseAddress + '/Places')
         .then(res => res.json())
         .then(
             (result) => dispatch(loadPlacesSuccess(result)),
@@ -20,7 +21,7 @@ export function fetchCategorizedPlaces() {
     return dispatch => {
         console.log('fetchCategorizedPlaces')
         dispatch(loadCategorizedPlaces());
-        fetch('http://192.168.1.22:5000/Places')
+        fetch(apiConfig.baseAddress + '/Places')
         .then(res => res.json())
         .then(
             (result) => {
@@ -43,7 +44,7 @@ export function addNewPlace(name: string, description: string, imageUri?: string
         dispatch(addPlace());
         if (imageUri) {
             readAsStringAsync(imageUri, { encoding: 'base64'}).then(base64Data => {
-                fetch('http://192.168.1.22:5000/Places', {
+                fetch(apiConfig.baseAddress + '/Places', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ placeName: name, description: description, images: [

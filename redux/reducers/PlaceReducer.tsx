@@ -22,7 +22,7 @@ export const initialPlacesState: PlacesState = {
     addingError: false,
 }
 
-const placeReducer = (state: PlacesState = initialPlacesState, action): PlacesState => {
+const placeReducer = (state: PlacesState = initialPlacesState, action: any): PlacesState => {
     // console.log(action);
     switch(action.type) {
         case ADD_PLACE:
