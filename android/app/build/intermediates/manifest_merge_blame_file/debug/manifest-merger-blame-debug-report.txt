@@ -1,0 +1,308 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="DringSpot.Adndroid"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="28" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:3:3-75
+11-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:3:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:2:3-64
+12-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+13-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:4:3-72
+13-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:4:20-70
+14    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+14-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:5:3-77
+14-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:5:20-75
+15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:6:3-72
+15-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:6:20-70
+16    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+16-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:7:3-71
+16-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:7:20-69
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:8:3-63
+17-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:8:20-61
+18    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+18-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:9:3-77
+18-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:9:20-75
+19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+19-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:10:3-78
+19-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:10:20-76
+20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+20-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:11:3-76
+20-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:11:20-74
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:12:3-62
+21-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:12:20-60
+22    <uses-permission android:name="android.permission.READ_CONTACTS" />
+22-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:13:3-69
+22-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:13:20-67
+23    <uses-permission android:name="android.permission.READ_CALENDAR" />
+23-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:14:3-69
+23-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:14:20-67
+24    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+24-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:15:3-70
+24-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:15:20-68
+25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+25-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:16:3-77
+25-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:16:20-75
+26    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+26-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:17:3-68
+26-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:17:20-66
+27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:18:3-78
+27-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:18:20-76
+28    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+28-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:19:3-70
+28-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:19:20-68
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:20:3-76
+29-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:20:20-74
+30    <uses-permission android:name="android.permission.WAKE_LOCK" />
+30-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:21:3-65
+30-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:21:20-63
+31    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+31-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:22:3-79
+31-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:22:20-77
+32    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+32-->[com.facebook.flipper:flipper:0.33.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\80cad9ab50a54483840c2511d25e5917\jetified-flipper-0.33.1\AndroidManifest.xml:16:5-76
+32-->[com.facebook.flipper:flipper:0.33.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\80cad9ab50a54483840c2511d25e5917\jetified-flipper-0.33.1\AndroidManifest.xml:16:22-73
+33    <uses-permission android:name="android.permission.STORAGE" />
+33-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-66
+33-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-63
+34    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+34-->[:expo-location] C:\projects\examples\redux-text\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-77
+34-->[:expo-location] C:\projects\examples\redux-text\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-74
+35    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+35-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:15:5-98
+35-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:15:22-95
+36    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+36-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:16:5-94
+36-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:16:22-91
+37
+38    <application
+38-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:23:3-41:17
+39        android:name="DringSpot.Adndroid.MainApplication"
+39-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:23:16-47
+40        android:allowBackup="true"
+40-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:23:162-188
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.1.0] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\71bf4efc4a31a947ad653616e8e5bcce\core-1.1.0\AndroidManifest.xml:24:18-86
+42        android:debuggable="true"
+43        android:icon="@mipmap/ic_launcher"
+43-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:23:81-115
+44        android:label="@string/app_name"
+44-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:23:48-80
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:23:116-161
+46        android:theme="@style/AppTheme"
+46-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:23:189-220
+47        android:usesCleartextTraffic="true" >
+47-->C:\projects\examples\redux-text\android\app\src\debug\AndroidManifest.xml:6:18-53
+48        <meta-data
+48-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:24:5-93
+49            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+49-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:24:16-68
+50            android:value="38.0.0" />
+50-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:24:69-91
+51        <meta-data
+51-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:25:5-82
+52            android:name="expo.modules.updates.ENABLED"
+52-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:25:16-59
+53            android:value="true" />
+53-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:25:60-80
+54        <meta-data
+54-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:26:5-105
+55            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+55-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:26:16-80
+56            android:value="ALWAYS" />
+56-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:26:81-103
+57        <meta-data
+57-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:27:5-99
+58            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+58-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:27:16-79
+59            android:value="0" />
+59-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:27:80-97
+60
+61        <activity
+61-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:5-39:16
+62            android:name="DringSpot.Adndroid.MainActivity"
+62-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:15-43
+63            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+63-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:77-154
+64            android:label="@string/app_name"
+64-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:44-76
+65            android:launchMode="singleTask"
+65-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:155-186
+66            android:screenOrientation="portrait"
+66-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:276-312
+67            android:theme="@style/Theme.App.SplashScreen"
+67-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:230-275
+68            android:windowSoftInputMode="adjustResize" >
+68-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:28:187-229
+69            <intent-filter>
+69-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:29:7-32:23
+70                <action android:name="android.intent.action.MAIN" />
+70-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:30:9-60
+70-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:30:17-58
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:31:9-68
+72-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:31:19-66
+73            </intent-filter>
+74            <intent-filter>
+74-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:33:7-38:23
+75                <action android:name="android.intent.action.VIEW" />
+75-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:34:9-60
+75-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:34:17-58
+76
+77                <category android:name="android.intent.category.DEFAULT" />
+77-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:35:9-67
+77-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:35:19-65
+78                <category android:name="android.intent.category.BROWSABLE" />
+78-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:36:9-69
+78-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:36:19-67
+79
+80                <data android:scheme="DringSpot.Adndroid" />
+80-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:37:9-52
+80-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:37:15-50
+81            </intent-filter>
+82        </activity>
+83        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+83-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:40:5-81
+83-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:40:15-79
+84
+85        <meta-data
+85-->[:unimodules-react-native-adapter] C:\projects\examples\redux-text\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:91
+86            android:name="org.unimodules.core.AppLoader#react-native-headless"
+86-->[:unimodules-react-native-adapter] C:\projects\examples\redux-text\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-79
+87            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
+87-->[:unimodules-react-native-adapter] C:\projects\examples\redux-text\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-88
+88
+89        <provider
+89-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-27:20
+90            android:name="expo.modules.filesystem.FileSystemFileProvider"
+90-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-74
+91            android:authorities="DringSpot.Adndroid.FileSystemFileProvider"
+91-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-74
+92            android:exported="false"
+92-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-37
+93            android:grantUriPermissions="true" >
+93-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-47
+94            <meta-data
+94-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-26:70
+95                android:name="android.support.FILE_PROVIDER_PATHS"
+95-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:17-67
+96                android:resource="@xml/file_system_provider_paths" />
+96-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:17-67
+97        </provider> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+98        <provider
+98-->[:expo-image-picker] C:\projects\examples\redux-text\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-22:20
+99            android:name="expo.modules.imagepicker.ImagePickerFileProvider"
+99-->[:expo-image-picker] C:\projects\examples\redux-text\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-76
+100            android:authorities="DringSpot.Adndroid.ImagePickerFileProvider"
+100-->[:expo-image-picker] C:\projects\examples\redux-text\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-75
+101            android:exported="false"
+101-->[:expo-image-picker] C:\projects\examples\redux-text\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-37
+102            android:grantUriPermissions="true" >
+102-->[:expo-image-picker] C:\projects\examples\redux-text\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-47
+103            <meta-data
+103-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-26:70
+104                android:name="android.support.FILE_PROVIDER_PATHS"
+104-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:17-67
+105                android:resource="@xml/image_picker_provider_paths" />
+105-->[:expo-file-system] C:\projects\examples\redux-text\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:17-67
+106        </provider>
+107
+108        <service
+108-->[:expo-location] C:\projects\examples\redux-text\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:40
+109            android:name="expo.modules.location.services.LocationTaskService"
+109-->[:expo-location] C:\projects\examples\redux-text\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-78
+110            android:exported="false" />
+110-->[:expo-location] C:\projects\examples\redux-text\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+111
+112        <activity
+112-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\c9612b73731ef4fe48e04d6e24bb5d90\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+113            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+113-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\c9612b73731ef4fe48e04d6e24bb5d90\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+114            android:exported="false"
+114-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\c9612b73731ef4fe48e04d6e24bb5d90\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+115            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+115-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\c9612b73731ef4fe48e04d6e24bb5d90\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+116
+117        <meta-data
+117-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\4332ab16b79516767d8b10c933d511f5\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+118            android:name="com.google.android.gms.version"
+118-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\4332ab16b79516767d8b10c933d511f5\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+119            android:value="@integer/google_play_services_version" />
+119-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\4332ab16b79516767d8b10c933d511f5\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+120
+121        <activity
+121-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:27:9-31:75
+122            android:name="net.openid.appauth.AuthorizationManagementActivity"
+122-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:28:13-78
+123            android:exported="false"
+123-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:29:13-37
+124            android:launchMode="singleTask"
+124-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:30:13-44
+125            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+125-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:31:13-72
+126        <activity
+126-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:32:9-43:20
+127            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+127-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:33:13-74
+128            android:exported="true" >
+128-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:34:13-36
+129            <intent-filter>
+129-->[net.openid:appauth:0.7.1] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\476f0f0659f3081f4681ebb7c0cb96e2\jetified-appauth-0.7.1\AndroidManifest.xml:35:13-42:29
+130                <action android:name="android.intent.action.VIEW" />
+130-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:34:9-60
+130-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:34:17-58
+131
+132                <category android:name="android.intent.category.DEFAULT" />
+132-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:35:9-67
+132-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:35:19-65
+133                <category android:name="android.intent.category.BROWSABLE" />
+133-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:36:9-69
+133-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:36:19-67
+134
+135                <data android:scheme="io.identityserver.demo" />
+135-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:37:9-52
+135-->C:\projects\examples\redux-text\android\app\src\main\AndroidManifest.xml:37:15-50
+136            </intent-filter>
+137        </activity>
+138
+139        <service
+139-->[androidx.room:room-runtime:2.1.0] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\d1dd4bffbd2ae299fbe9492b8fb3f644\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+140            android:name="androidx.room.MultiInstanceInvalidationService"
+140-->[androidx.room:room-runtime:2.1.0] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\d1dd4bffbd2ae299fbe9492b8fb3f644\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
+141            android:exported="false" />
+141-->[androidx.room:room-runtime:2.1.0] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\d1dd4bffbd2ae299fbe9492b8fb3f644\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
+142        <service
+142-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:19:9-21:40
+143            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+143-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:20:13-132
+144            android:exported="false" />
+144-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:21:13-37
+145        <service
+145-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:22:9-24:40
+146            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+146-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:23:13-127
+147            android:exported="false" />
+147-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:24:13-37
+148        <service
+148-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:25:9-27:40
+149            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+149-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:26:13-120
+150            android:exported="false" />
+150-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Gabriel Pająk\.gradle\caches\transforms-2\files-2.1\16224945e6f0f37c95c14b28704f86d8\jetified-library-3.2.11\AndroidManifest.xml:27:13-37
+151    </application>
+152
+153</manifest>
