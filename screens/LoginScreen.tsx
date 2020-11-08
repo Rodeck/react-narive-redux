@@ -6,7 +6,7 @@ import { AnyAction, bindActionCreators, Dispatch } from 'redux';
 import { translate } from '../helpers/Translator'
 import { AppState } from '../redux/Store';
 import { fetchCategorizedPlaces } from '../api/FetchPlaces';
-import { authorize } from 'react-native-app-auth';
+import { AuthConfiguration, authorize } from 'react-native-app-auth';
 import { apiConfig } from '../api/ApiConfig';
 
 type LoginScreenProps = {
@@ -17,11 +17,15 @@ type LoginScreenState = {
 
 export class LoginScreen extends React.Component<LoginScreenProps, LoginScreenState> {
 
-    private config = {
-        issuer: apiConfig.authAddress,
+    private config: AuthConfiguration = {
         clientId: apiConfig.clientId,
-        redirectUrl: 'https://openidconnect.net/callback',
+        redirectUrl: 'com.myapp://oauth',
         scopes: ['DringSpot.Mobile'],
+        serviceConfiguration: {
+            registrationEndpoint: apiConfig.authAddress + '/account/register',
+            authorizationEndpoint: apiConfig.authAddress + '/account/login',
+            tokenEndpoint: apiConfig.authAddress
+        }
       };
 
     constructor(props: LoginScreenProps) {
