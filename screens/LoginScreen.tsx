@@ -5,10 +5,7 @@ import { AnyAction, bindActionCreators, Dispatch } from 'redux';
 import { translate } from '../helpers/Translator'
 import { AppState } from '../redux/Store';
 import { apiConfig } from '../api/ApiConfig';
-import * as AppAuth from 'expo-app-auth';
-import { OAuthProps } from 'expo-app-auth';
-import * as Linking from 'expo-linking'
-import * as AuthSession from 'expo-auth-session';
+import { AuthConfiguration, authorize } from 'react-native-app-auth';
 
 type LoginScreenProps = {
 }
@@ -87,19 +84,12 @@ const styles = StyleSheet.create({
     },
   });
 
-  const useProxy = false;
-
-  const redirectUri = AuthSession.makeRedirectUri({
-    native: Linking.makeUrl(),
-    useProxy,
-  });
-  
-  let config: OAuthProps = {
+  let config: AuthConfiguration = {
     issuer: apiConfig.authAddress,
     scopes: ['openid', 'profile'],
     /* This is the CLIENT_ID generated from a Firebase project */
     clientId: apiConfig.clientId,
-    redirectUrl: redirectUri,
+    redirectUrl: 'com.redroddeck.dringspot.mobile',
     serviceConfiguration: {
         authorizationEndpoint: apiConfig.authAddress + '/account/login',
         tokenEndpoint: apiConfig.authAddress + '/account/token'
@@ -110,7 +100,7 @@ const styles = StyleSheet.create({
   
   export async function signInAsync() {
     console.log(config);
-    let authState = await AppAuth.authAsync(config);
+    const authState = await authorize(config);
     console.log('logged in:', authState);
     await cacheAuthAsync(authState);
     console.log('signInAsync', authState);
@@ -125,36 +115,36 @@ const styles = StyleSheet.create({
     let value = await AsyncStorage.getItem(StorageKey);
     let authState = JSON.parse(value);
     console.log('getCachedAuthAsync', authState);
-    if (authState) {
-      if (checkIfTokenExpired(authState)) {
-        return refreshAuthAsync(authState);
-      } else {
-        return authState;
-      }
-    }
-    return null;
-  }
-  
-  function checkIfTokenExpired({ accessTokenExpirationDate }) {
-    return new Date(accessTokenExpirationDate) < new Date();
-  }
-  
-  async function refreshAuthAsync({ refreshToken }) {
-    let authState = await AppAuth.refreshAsync(config, refreshToken);
-    console.log('refreshAuth', authState);
-    await cacheAuthAsync(authState);
+    // if (authState) {
+    //   if (checkIfTokenExpired(authState)) {
+    //     return refreshAuthAsync(authState);
+    //   } else {
+    //     return authState;
+    //   }
+    // }
     return authState;
   }
   
-  export async function signOutAsync({ accessToken }) {
-    try {
-      await AppAuth.revokeAsync(config, {
-        token: accessToken,
-        isClientIdProvided: true,
-      });
-      await AsyncStorage.removeItem(StorageKey);
-      return null;
-    } catch (e) {
-      alert(`Failed to revoke token: ${e.message}`);
-    }
-  }
+  // function checkIfTokenExpired({ accessTokenExpirationDate }) {
+  //   return new Date(accessTokenExpirationDate) < new Date();
+  // }
+  
+  // async function refreshAuthAsync({ refreshToken }) {
+  //   let authState = await AppAuth.refreshAsync(config, refreshToken);
+  //   console.log('refreshAuth', authState);
+  //   await cacheAuthAsync(authState);
+  //   return authState;
+  // }
+  
+  // export async function signOutAsync({ accessToken }) {
+  //   try {
+  //     await AppAuth.revokeAsync(config, {
+  //       token: accessToken,
+  //       isClientIdProvided: true,
+  //     });
+  //     await AsyncStorage.removeItem(StorageKey);
+  //     return null;
+  //   } catch (e) {
+  //     alert(`Failed to revoke token: ${e.message}`);
+  //   }
+  // }

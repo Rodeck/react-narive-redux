@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="DringSpot.Adndroid"
+    package="com.redroddeck.dringspot.mobile"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -36,7 +36,7 @@
     <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
 
     <application
-        android:name="DringSpot.Adndroid.MainApplication"
+        android:name="com.redroddeck.reduxtext.MainApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -45,6 +45,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <meta-data
+            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+            android:value="https://exp.host/@redroddeck/redux-text" />
         <meta-data
             android:name="expo.modules.updates.EXPO_SDK_VERSION"
             android:value="38.0.0" />
@@ -59,7 +62,7 @@
             android:value="0" />
 
         <activity
-            android:name="DringSpot.Adndroid.MainActivity"
+            android:name="com.redroddeck.reduxtext.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
             android:label="@string/app_name"
             android:launchMode="singleTask"
@@ -77,7 +80,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="DringSpot.Adndroid" />
+                <data android:scheme="dringspot" />
+                <data android:scheme="com.redroddeck.reduxtext" />
             </intent-filter>
         </activity>
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
@@ -88,7 +92,7 @@
 
         <provider
             android:name="expo.modules.filesystem.FileSystemFileProvider"
-            android:authorities="DringSpot.Adndroid.FileSystemFileProvider"
+            android:authorities="com.redroddeck.dringspot.mobile.FileSystemFileProvider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -97,7 +101,7 @@
         </provider> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
         <provider
             android:name="expo.modules.imagepicker.ImagePickerFileProvider"
-            android:authorities="DringSpot.Adndroid.ImagePickerFileProvider"
+            android:authorities="com.redroddeck.dringspot.mobile.ImagePickerFileProvider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -119,6 +123,11 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
+            android:name="expo.modules.appauth.AppAuthBrowserActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
             android:name="net.openid.appauth.AuthorizationManagementActivity"
             android:exported="false"
             android:launchMode="singleTask"
@@ -132,7 +141,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="io.identityserver.demo" />
+                <data android:scheme="com.redroddeck.dringspot.mobile" />
             </intent-filter>
         </activity>
 

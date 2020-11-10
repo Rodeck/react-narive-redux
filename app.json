@@ -17,11 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.redroddeck.dringspot.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "scheme": "dringspot"
+    "scheme": "dringspot",
+    "android": {
+      "package": "com.redroddeck.dringspot.mobile"
+    }
   }
 }
